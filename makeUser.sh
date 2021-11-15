@@ -7,7 +7,7 @@ usermod -aG sudo tfds
 sudo usermod --shell /bin/bash tfds
 sudo mkdir /home/tfds
 sudo chown tfds /home/tfds
-su - tfds
+# su - tfds
 echo "end makeUser"
 echo "==========================================="
 

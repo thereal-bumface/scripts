@@ -2,16 +2,15 @@
 echo "===================BEGIN installBumMods.sh==================="
 cd / 				 				# Navigate to root directory
 wget https://github.com/thereal-bumface/modList/archive/refs/heads/main.zip 	# Download "main.zip"
-unzip main.zip 						# Unzip "main.zip"
-rm -rf main.zip  					# Delete "main.zip"
+sudo unzip main.zip 						# Unzip "main.zip"
+sudo rm -rf main.zip  					# Delete "main.zip"
 cd modList-main						# Navigate to "/modList-main"
-unzip tf.zip						# Unzip "tf.zip"
-rm -rf tf.zip						# Delete "tf.zip"
-
+sudo unzip tf.zip						# Unzip "tf.zip"
+sudo rm -rf tf.zip						# Delete "tf.zip"
 cd /										# Navigate to root directory
-rsync -av /modList-main/tf /hlserver/tf2	# Copy/merge tf folder that we just unzipped to "/hlserver/tf2" folder
+sudo rsync -av /modList-main/tf /hlserver/tf2	# Copy/merge tf folder that we just unzipped to "/hlserver/tf2" folder
 cd /										# Navigate to root directory
-rm -rf modList-main							# Delete "/modList-main"
+sudo rm -rf modList-main							# Delete "/modList-main"
 
 read -p "Enter Your Server Name: " serverName							# User input serverName
 serverIP=$(curl ifconfig.me)											# Automatically gets IP

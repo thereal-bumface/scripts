@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 echo "===================BEGIN installBumMods.sh==================="
 cd / 				 				# Navigate to root directory
-wget https://github.com/thereal-bumface/modList/archive/refs/heads/main.zip 	# Download "main.zip"
+sudo wget https://github.com/thereal-bumface/modList/archive/refs/heads/main.zip 	# Download "main.zip"
 sudo unzip main.zip 						# Unzip "main.zip"
 sudo rm -rf main.zip  					# Delete "main.zip"
 cd modList-main						# Navigate to "/modList-main"

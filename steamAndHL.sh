@@ -9,14 +9,15 @@ cd /hlserver						# Navigate into the "/hlserver" directory
 sudo dpkg --add-architecture i386	# Add necessary packages
 sudo apt-get update					# Update packages
 sudo apt-get -y install lib32z1 libncurses5:i386 libbz2-1.0:i386 libgcc-s1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386	# Install necessary packages
-sudo apt install steamcmd 
+# sudo apt install steamcmd  -y
 # sudo apt install software-properties-common
 sudo add-apt-repository multiverse -y
 sudo apt-get update
 sudo apt-get --with-new-pkgs upgrade -y	# Upgrade packages
 # ln -s /usr/games/steamcmd steamcmd
 
-curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -		# Install steamCMD
+wget "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz"		# Install steamCMD
+tar zxf steamcmd_linux.tar.gz
 echo -e "login anonymous\nforce_install_dir /hlserver/tf2\napp_update 232250\nquit" > tf2_ds.txt 	# Create "tf2_ds.txt"
 echo -e "./steamcmd.sh +runscript tf2_ds.txt" > update.sh  											# Create "update.sh"
 sudo chmod +x update.sh   																			# Make "update.sh" executable

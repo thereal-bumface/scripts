@@ -14,4 +14,4 @@ echo "===================END makeUser.sh==================="
 cd /								# Navigate to root directory
 cd scripts-main						# Navigate to "/scripts-main"
 sudo chmod +x steamAndHL.sh 		# Make "steamAndHL.sh" executable
-./steamAndHL.sh 					# Execute "steamAndHL.sh"
+sudo -u tfds ./steamAndHL.sh 		# Execute "steamAndHL.sh" as "tfds" for security

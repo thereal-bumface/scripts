@@ -42,7 +42,7 @@ echo "Your Admin Priviliges have been applied to STEAM ID: $steamID"
 
 echo "Want to start your server? (y/n): "
 read shouldStart
-if(shouldStart -eq "y" || shouldStart -eq "Y")
+if($shouldStart -eq "y" || $shouldStart -eq "Y")
 then
 	cd /							# Navigate to root directory
 	cd hlserver						# Navigate to "/hlserver"
@@ -50,7 +50,7 @@ then
 	echo "Open TF2 and type 'connect $serverIP' into your console to connect to your server. Cheers!"
 else
 	echo "If you want to start your server manually, navigate to the 'hlserver' folder, then type 'screen -S tf2' to start a screen, then type './tf.sh', then press 'ctrl+a', then 'd' to exit the screen. Open TF2 and type 'connect $serverIP' into your console to connect to your server. Cheers!"
-
+fi
 echo "===================END localHostMaps.sh==================="
 cd /								# Navigate to root directory
 cd scripts-main						# Navigate to "/scripts-main"

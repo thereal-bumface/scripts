@@ -38,8 +38,10 @@ sudo sed -i 's/"Your Steam ID"/"$steamID"/' /hlserver/tf2/tf/addons/sourcemod/co
 echo "Your Admin Priviliges have been applied to STEAM ID: $steamID"
 
 
-read -p "Want to start your server? (y/n): " startNow	# User input startNow
-if($startNow -eq "y" || $startNow -eq "Y")
+
+read -p "Want to start your server? (y/n): " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	cd /							# Navigate to root directory
 	cd hlserver						# Navigate to "/hlserver"

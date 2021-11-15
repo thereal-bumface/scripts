@@ -1,6 +1,6 @@
-## TO DOWNLOAD THIS REPO FROM PUTTY LINUX SERVER:
+# TO DOWNLOAD THIS REPO FROM PUTTY LINUX SERVER:
 
-# Navigates to root directory, downloads the zip file from my github, installs unzip if not installed, unzips the main.zip, navigates to root directory, navigates to scripts-main, makes start.sh executable, and executes start.sh
+## Navigates to root directory, downloads the zip file from my github, installs unzip if not installed, unzips the main.zip, navigates to root directory, navigates to scripts-main, makes start.sh executable, and executes start.sh
 ```` 
 cd / && wget https://github.com/thereal-bumface/scripts/archive/refs/heads/main.zip && apt install unzip && unzip main.zip && cd / && cd scripts-main && sudo chmod +x start.sh && ./start.sh
 ```` 

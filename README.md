@@ -1,8 +1,6 @@
 TO DOWNLOAD THIS REPO FROM PUTTY LINUX SERVER:
 
-cd / && wget https://github.com/thereal-bumface/scripts/archive/refs/heads/main.zip
-apt install unzip
-unzip main.zip
+cd / && wget https://github.com/thereal-bumface/scripts/archive/refs/heads/main.zip && apt install unzip && unzip main.zip
 
 
 To run this sequence of scripts, run the following:

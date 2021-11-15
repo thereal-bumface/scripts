@@ -1,9 +1,10 @@
 #!/usr/bin/bash
 echo "==========================================="
 echo "begin start"
+cd /
 sudo rm -rf main.zip
-sudo mv scripts/* .
-sudo rm -rf scripts
+sudo mv scripts-main/* .
+sudo rm -rf scripts-main
 echo "end start"
 echo "==========================================="
 

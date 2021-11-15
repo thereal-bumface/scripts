@@ -13,7 +13,9 @@ cd /										# Navigate to root directory
 rm -rf modList-main							# Delete "/modList-main"
 
 read -p "Enter Your Server Name: " serverName							# User input serverName
-read -p "Enter Your Server IP Address: " serverIP						# User input serverIP
+# read -p "Enter Your Server IP Address: " serverIP						# User input serverIP
+serverIP=$(curl ifconfig.me)											# Automatically gets IP
+
 read -p "Enter Your Message of the Day (motd): " motd					# User input motd
 read -p "Enter Your Map Cycle: " mapcycle								# User input mapcycle
 read -p "Enter Your Steam ID (example: STEAM_0:1:123456789_): " steamID	# User input steamID

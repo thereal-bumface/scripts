@@ -1,13 +1,10 @@
 #!/usr/bin/bash
-echo "==========================================="
-echo "begin start"
-cd /
-sudo rm -rf main.zip
-sudo mv scripts-main/* .
-sudo rm -rf scripts-main
-echo "end start"
-echo "==========================================="
-
-cd /
-sudo chmod +x makeUser.sh
-./makeUser.sh
+echo "===================BEGIN start.sh==================="
+cd / 				 				# Navigate to root directory
+cd /scripts-main	 				# Navigate to "/scripts-main"
+sudo rm -rf main.zip 				# Delete the downloaded zip file 
+echo "===================END start.sh==================="
+cd /								# Navigate to root directory
+cd scripts-main						# Navigate to "/scripts-main"
+sudo chmod +x makeUser.sh 			# Make "makeUser.sh" executable
+./makeUser.sh						# Execute "makeUser.sh"

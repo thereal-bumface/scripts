@@ -1,15 +1,13 @@
 #!/usr/bin/bash
-echo "==========================================="
-echo "begin cleanup.sh"
-cd /
-rm -rf 'How to Make Your Own TF2 Server.pdf'
-rm -rf README.md
-rm -rf start.sh
-rm -rf makeUser.sh
-rm -rf steamAndHL.sh
-rm -rf makeAndRunTF.sh
-rm -rf additionalSetup.sh
-rm -rf localHostMaps.sh
-rm -rf cleanup.sh
-echo "end cleanup.sh"
-echo "==========================================="
+echo "===================BEGIN cleanup.sh==================="
+cd /								# Navigate to root directory
+rm -rf scripts-main					# Delete scripts-main folder (and contents)
+echo "===================END cleanup.sh==================="
+
+echo "Enter Your Server IP Address: "
+read serverIP
+echo "Enter Your Server Name: "
+read serverName
+echo "Enter Your Steam ID (example: STEAM_0:1:123456789_): "
+read steamID
+

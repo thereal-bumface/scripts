@@ -1,17 +1,17 @@
 #!/usr/bin/bash
-echo "==========================================="
-echo "begin makeUser"
-useradd tfds
-passwd -d tfds 
-usermod -aG sudo tfds
-sudo usermod --shell /bin/bash tfds
-sudo mkdir /home
-sudo mkdir /home/tfds
-sudo chown tfds /home/tfds
-# su - tfds
-echo "end makeUser"
-echo "==========================================="
-
-cd /
-sudo chmod +x steamAndHL.sh
-./steamAndHL.sh
+echo "===================BEGIN makeUser.sh==================="
+useradd tfds						# Create new user "tfds"
+passwd -d tfds 						# Remove password from "tfds"
+usermod -aG sudo tfds				# Give "tfds" admin rights
+sudo usermod --shell /bin/bash tfds	# Set default shell to bash for "tfds"
+cd /								# Navigate to root directory
+sudo mkdir -p  /home/tfds			# Create "/home/tfds" directory if it doesn't already exist
+sudo chown tfds /home/tfds			# Give "tfds" permissions to "/home/tfds"
+sudo apt update						# Update packages
+sudo apt-get upgrade -y				# Upgrade packages
+# sudo apt-get install xfonts-100dpi
+echo "===================END makeUser.sh==================="
+cd /								# Navigate to root directory
+cd scripts-main						# Navigate to "/scripts-main"
+sudo chmod +x steamAndHL.sh 		# Make "steamAndHL.sh" executable
+./steamAndHL.sh 					# Execute "steamAndHL.sh"

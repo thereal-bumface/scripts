@@ -6,3 +6,7 @@ sudo chmod 775 -R /var/www/html/
 sudo chgrp -R tfds /var/www/html/
 echo "end localHostMaps.sh"
 echo "==========================================="
+
+cd /
+sudo chmod +x cleanup.sh
+./cleanup.sh

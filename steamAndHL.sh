@@ -22,5 +22,5 @@ echo "===================END steamAndHL.sh==================="
 cd /									# Navigate to root directory
 cd scripts-main							# Navigate to "/scripts-main"
 sudo chmod +x makeAndRunTF.sh   		# Make "makeAndRunTF.sh" executable
-sed -i -e 's/\r$//' makeAndRunTF.sh
+sudo sed -i -e 's/\r$//' makeAndRunTF.sh
 ./makeAndRunTF.sh   					# Execute "makeAndRunTF.sh"

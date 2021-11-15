@@ -5,8 +5,8 @@ wget https://github.com/thereal-bumface/modList/archive/refs/heads/main.zip 	# D
 unzip main.zip 						# Unzip "main.zip"
 rm -rf main.zip  					# Delete "main.zip"
 cd modList-main						# Navigate to "/modList-main"
-unzip tf.unzip						# Unzip "tf.zip"
-rm -rf tf.unzip						# Delete "tf.unzip"
+unzip tf.zip						# Unzip "tf.zip"
+rm -rf tf.zip						# Delete "tf.zip"
 
 rsync -av /modList-main/tf /hlserver/tf2	# Copy/merge tf folder that we just unzipped to "/hlserver/tf2" folder
 cd /										# Navigate to root directory

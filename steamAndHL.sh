@@ -21,5 +21,5 @@ echo "==========================================="
 
 cd /
 sudo chmod +x makeAndRunTF.sh
-sed -i -e 's/\r$//' makeAndRunTF.sh
+sed -i -e -y 's/\r$//' makeAndRunTF.sh
 ./makeAndRunTF.sh

@@ -9,9 +9,8 @@ sudo mkdir -p  /home/tfds			# Create "/home/tfds" directory if it doesn't alread
 sudo chown tfds /home/tfds			# Give "tfds" permissions to "/home/tfds"
 sudo apt update						# Update packages
 sudo apt-get upgrade -y				# Upgrade packages
-# sudo apt-get install xfonts-100dpi
 echo "===================END makeUser.sh==================="
 cd /								# Navigate to root directory
 cd scripts-main						# Navigate to "/scripts-main"
 sudo chmod +x steamAndHL.sh 		# Make "steamAndHL.sh" executable
-sudo -u tfds ./steamAndHL.sh 		# Execute "steamAndHL.sh" as "tfds" for security
+sudo -u tfds ./steamAndHL.sh 		# Execute "steamAndHL.sh" (and subsequent scripts) as "tfds" for security

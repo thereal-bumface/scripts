@@ -12,16 +12,11 @@ rsync -av /modList-main/tf /hlserver/tf2	# Copy/merge tf folder that we just unz
 cd /										# Navigate to root directory
 rm -rf modList-main							# Delete "/modList-main"
 
-echo "Enter Your Server Name: "				
-read serverName								# User input serverName
-echo "Enter Your Server IP Address: "
-read serverIP								# User input serverIP
-echo "Enter Your Message of the Day (motd): "
-read motd 									# User input motd
-echo "Enter Your Map Cycle: "
-read mapcycle 								# User input mapcycle
-echo "Enter Your Steam ID (example: STEAM_0:1:123456789_): "
-read steamID  								# User input steamID
+read -p "Enter Your Server Name: " serverName							# User input serverName
+read -p "Enter Your Server IP Address: " serverIP						# User input serverIP
+read -p "Enter Your Message of the Day (motd): " motd					# User input motd
+read -p "Enter Your Map Cycle: " mapcycle								# User input mapcycle
+read -p "Enter Your Steam ID (example: STEAM_0:1:123456789_): " steamID	# User input steamID
 
 sudo sed -i 's/"YOUR HOST NAME HERE"/"$serverName"/' /hlserver/tf2/tf/cfg/server.cfg 	# write serverName to server.cfg
 echo "Your Server Name is Now: $serverName"
@@ -40,9 +35,9 @@ echo "Your Map Cycle is Now: $mapcycle"
 sudo sed -i 's/"Your Steam ID"/"$steamID"/' /hlserver/tf2/tf/addons/sourcemod/configs/admins_simple.ini  	# write steamID to admins_simple.ini
 echo "Your Admin Priviliges have been applied to STEAM ID: $steamID"
 
-echo "Want to start your server? (y/n): "
-read shouldStart
-if($shouldStart -eq "y" || $shouldStart -eq "Y")
+
+read -p "Want to start your server? (y/n): " startNow	# User input startNow
+if($startNow -eq "y" || $startNow -eq "Y")
 then
 	cd /							# Navigate to root directory
 	cd hlserver						# Navigate to "/hlserver"

@@ -33,9 +33,7 @@ sudo echo -e "$mapcycle" > /hlserver/tf2/tf/cfg/mapcycle.txt									# Write "ma
 echo "Your Map Cycle is Now: $mapcycle"
 
 sudo sed -i "s/Your Steam ID/$steamID/" /hlserver/tf2/tf/addons/sourcemod/configs/admins_simple.ini  	# write steamID to admins_simple.ini
-echo "Your Admin Priviliges have been applied to STEAM ID: $steamID"
-
-
+echo "Your Admin privileges have been applied to STEAM ID: $steamID"
 
 read -p "Want to start your server? (y/n): " -n 1 -r
 echo    # (optional) move to a new line

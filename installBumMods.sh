@@ -24,11 +24,9 @@ echo "Your Server Name is Now: $serverName"
 sudo sed -i "s/YOUR.IP.ADDRESS.HERE/$serverIP/" /hlserver/tf2/tf/cfg/server.cfg  	# write serverIP to server.cfg
 echo "Your Server IP for fastdl is Now: $serverIP"
 
-sudo truncate -s 0 /hlserver/tf2/tf/cfg/motd.txt												# Erase current motd.txt
 sudo echo -e "$motd" > /hlserver/tf2/tf/cfg/motd.txt											# Write "motd" to motd.txt
 echo "Your MOTD is Now: $motd"
 
-sudo truncate -s 0 /hlserver/tf2/tf/cfg/mapcycle.txt											# Erase current mapcycle.txt
 sudo echo -e "$mapcycle" > /hlserver/tf2/tf/cfg/mapcycle.txt									# Write "mapcycle" to mapcycle.txt
 echo "Your Map Cycle is Now: $mapcycle"
 

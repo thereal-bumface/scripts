@@ -32,7 +32,7 @@ sudo truncate -s 0 /hlserver/tf2/tf/cfg/mapcycle.txt											# Erase current m
 sudo echo -e "$mapcycle" > /hlserver/tf2/tf/cfg/mapcycle.txt									# Write "mapcycle" to mapcycle.txt
 echo "Your Map Cycle is Now: $mapcycle"
 
-sudo sed -i 's/"Your Steam ID"/"$steamID"/' /hlserver/tf2/tf/addons/sourcemod/configs/admins_simple.ini  	# write steamID to admins_simple.ini
+sudo sed -i "s/Your Steam ID/$steamID/" /hlserver/tf2/tf/addons/sourcemod/configs/admins_simple.ini  	# write steamID to admins_simple.ini
 echo "Your Admin Priviliges have been applied to STEAM ID: $steamID"
 
 

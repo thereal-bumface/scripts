@@ -3,10 +3,10 @@ echo "===================BEGIN installBumMods.sh==================="
 cd / 				 				# Navigate to root directory
 sudo wget https://github.com/thereal-bumface/modList/archive/refs/heads/main.zip 	# Download "main.zip"
 sudo unzip main.zip 						# Unzip "main.zip"
-sudo rm -rf main.zip  					# Delete "main.zip"
-cd modList-main						# Navigate to "/modList-main"
-sudo unzip tf.zip						# Unzip "tf.zip"
-sudo rm -rf tf.zip						# Delete "tf.zip"
+sudo rm -rf main.zip  						# Delete "main.zip"
+cd modList-main								# Navigate to "/modList-main"
+sudo unzip tf.zip							# Unzip "tf.zip"
+sudo rm -rf tf.zip							# Delete "tf.zip"
 cd /										# Navigate to root directory
 sudo rsync -av /modList-main/tf /hlserver/tf2	# Copy/merge tf folder that we just unzipped to "/hlserver/tf2" folder
 cd /										# Navigate to root directory
@@ -18,10 +18,10 @@ read -p "Enter Your Message of the Day (motd): " motd					# User input motd
 read -p "Enter Your Map Cycle: " mapcycle								# User input mapcycle
 read -p "Enter Your Steam ID (example: STEAM_0:1:123456789_): " steamID	# User input steamID
 
-sudo sed -i 's/YOUR HOST NAME HERE/${serverName}/' /hlserver/tf2/tf/cfg/server.cfg 	# write serverName to server.cfg
+sudo sed -i 's/YOUR HOST NAME HERE/\$serverName/' /hlserver/tf2/tf/cfg/server.cfg 	# write serverName to server.cfg
 echo "Your Server Name is Now: $serverName"
 
-sudo sed -i 's/YOUR.IP.ADDRESS.HERE/${serverIP}/' /hlserver/tf2/tf/cfg/server.cfg  	# write serverIP to server.cfg
+sudo sed -i 's/YOUR.IP.ADDRESS.HERE/\$serverIP/' /hlserver/tf2/tf/cfg/server.cfg  	# write serverIP to server.cfg
 echo "Your Server IP for fastdl is Now: $serverIP"
 
 sudo truncate -s 0 /hlserver/tf2/tf/cfg/motd.txt												# Erase current motd.txt

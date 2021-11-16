@@ -18,18 +18,18 @@ read -p "Enter Your Message of the Day (motd): " motd					# User input motd
 read -p "Enter Your Map Cycle: " mapcycle								# User input mapcycle
 read -p "Enter Your Steam ID (example: STEAM_0:1:123456789_): " steamID	# User input steamID
 
-sudo sed -i 's/YOUR HOST NAME HERE/$serverName/' /hlserver/tf2/tf/cfg/server.cfg 	# write serverName to server.cfg
+sudo sed -i 's/YOUR HOST NAME HERE/${serverName}/' /hlserver/tf2/tf/cfg/server.cfg 	# write serverName to server.cfg
 echo "Your Server Name is Now: $serverName"
 
-sudo sed -i 's/YOUR.IP.ADDRESS.HERE/$serverIP/' /hlserver/tf2/tf/cfg/server.cfg  	# write serverIP to server.cfg
+sudo sed -i 's/YOUR.IP.ADDRESS.HERE/${serverIP}/' /hlserver/tf2/tf/cfg/server.cfg  	# write serverIP to server.cfg
 echo "Your Server IP for fastdl is Now: $serverIP"
 
-truncate -s 0 /hlserver/tf2/tf/cfg/motd.txt												# Erase current motd.txt
-echo -e "$motd" > /hlserver/tf2/tf/cfg/motd.txt											# Write "motd" to motd.txt
+sudo truncate -s 0 /hlserver/tf2/tf/cfg/motd.txt												# Erase current motd.txt
+sudo echo -e "$motd" > /hlserver/tf2/tf/cfg/motd.txt											# Write "motd" to motd.txt
 echo "Your MOTD is Now: $motd"
 
-truncate -s 0 /hlserver/tf2/tf/cfg/mapcycle.txt											# Erase current mapcycle.txt
-echo -e "$mapcycle" > /hlserver/tf2/tf/cfg/mapcycle.txt									# Write "mapcycle" to mapcycle.txt
+sudo truncate -s 0 /hlserver/tf2/tf/cfg/mapcycle.txt											# Erase current mapcycle.txt
+sudo echo -e "$mapcycle" > /hlserver/tf2/tf/cfg/mapcycle.txt									# Write "mapcycle" to mapcycle.txt
 echo "Your Map Cycle is Now: $mapcycle"
 
 sudo sed -i 's/"Your Steam ID"/"$steamID"/' /hlserver/tf2/tf/addons/sourcemod/configs/admins_simple.ini  	# write steamID to admins_simple.ini

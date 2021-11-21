@@ -1,0 +1,17 @@
+0 4  * * * screen -S tf2 -X stuff 'sm_say Changing Map to Hightower in 1 Hour!^M'
+30 4 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Hightower in 30 Minutes!^M'
+50 4 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Hightower in 10 Minutes!^M'
+59 4 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Hightower in 1 Minute!^M'
+0 5  * * * screen -S tf2 -X stuff 'changelevel plr_hightower^M'
+
+0 12 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Rainytower in 1 Hour!^M'
+30 12 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Rainytower in 30 Minutes!^M'
+50 12 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Rainytower in 10 Minutes!^M'
+59 12 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Rainytower in 1 Minute!^M'
+0 13 * * * screen -S tf2 -X stuff 'changelevel plr_hightower_rainy^M'
+
+0 16 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Helltower in 1 Hour!^M'
+30 16 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Helltower in 30 Minutes!^M'
+50 16 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Helltower in 10 Minutes!^M'
+59 16 * * * screen -S tf2 -X stuff 'sm_say Changing Map to Helltower in 1 Minute!^M'
+0 17 * * * screen -S tf2 -X stuff 'changelevel plr_hightower_event^M'
